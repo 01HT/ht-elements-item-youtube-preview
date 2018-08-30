@@ -1,0 +1,11 @@
+{
+  "name": "@01ht/ht-elements-item-youtube-preview",
+  "version": "1.0.0",
+  "main": "ht-elements-item-youtube-preview.js",
+  "repository": "01ht/ht-elements-item-youtube-preview",
+  "author": "01ht Ltd",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.1"
+  }
+}
