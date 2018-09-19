@@ -2,7 +2,8 @@
 import { LitElement, html } from "@polymer/lit-element";
 
 class HTElementsItemYoutubePreview extends LitElement {
-  _render({ data }) {
+  render() {
+    const { data } = this;
     return html`
       <style>
         :host {
@@ -44,9 +45,12 @@ class HTElementsItemYoutubePreview extends LitElement {
 
   static get properties() {
     return {
-      data: String
+      data: { type: String }
     };
   }
 }
 
-customElements.define(HTElementsItemYoutubePreview.is, HTElementsItemYoutubePreview);
+customElements.define(
+  HTElementsItemYoutubePreview.is,
+  HTElementsItemYoutubePreview
+);
