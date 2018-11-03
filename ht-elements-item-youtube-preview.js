@@ -3,7 +3,7 @@ import { LitElement, html } from "@polymer/lit-element";
 
 class HTElementsItemYoutubePreview extends LitElement {
   render() {
-    const { data } = this;
+    const { data, titleText } = this;
     return html`
       <style>
         :host {
@@ -34,7 +34,9 @@ class HTElementsItemYoutubePreview extends LitElement {
         }
       </style>
       <div id="container">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${data}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        <iframe width="100%" height="100%" title="${
+          titleText ? titleText + " YouTube video" : "Element YouTube video"
+        }" src="https://www.youtube.com/embed/${data}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
       </div>
 `;
   }
@@ -45,7 +47,8 @@ class HTElementsItemYoutubePreview extends LitElement {
 
   static get properties() {
     return {
-      data: { type: String }
+      data: { type: String },
+      titleText: { type: String }
     };
   }
 }
